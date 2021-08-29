@@ -17,15 +17,15 @@ const execute = async(bot, msg, args, member) => {
     return msg.channel.send("Você não tem permissão para executar esse comando!").then( mm => mm.delete({ timeout: 3000}));
 
     //Verificar se mencionou um usuario.
-    if (args.length < 1 ) 
+    else if (args.length < 1 ) 
     return msg.channel.send(`Você precisa mencionar algum usuário.`).then( mm => mm.delete({ timeout: 3000}));
 
     //Verificar se ele usou o @ ao mencionar
-    if (args.length >= 1 && !args.shift().toLowerCase().startsWith('<'))
+    else if (args.length >= 1 && !args.shift().toLowerCase().startsWith('<'))
     return msg.channel.send('Você precisa mencionar algum usuário(Usando o @ antes).').then( mm => mm.delete({ timeout: 3000}));
 
     //Verificar se o usuario já foi registrado
-    if(membroo.roles.cache.has(cargo.id) || membroo.roles.cache.has(`785650860125978635`) || membroo.roles.cache.has(`785650413134938113`) ) 
+    else if(membroo.roles.cache.has(cargo.id) || membroo.roles.cache.has(`785650860125978635`) || membroo.roles.cache.has(`785650413134938113`) ) 
     return msg.channel.send("Este usuário já está registrado.").then( mm => mm.delete({ timeout: 3000}));;
 
     //Registrar o usuario.
