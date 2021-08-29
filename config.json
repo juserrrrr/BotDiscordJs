@@ -1,0 +1,13 @@
+{
+
+    "prefix": "!",
+    "token": "NzMzNzI0Mjg0NzAyMjk0MDg2.XxHUWQ.s5yVJiVHTXFb4-nZbW6Ks7-07bw",
+
+    "permissions":{
+        "!registrar":[{
+            "type": "role",
+            "value": "811429810315984898"
+        }
+        ]
+    }
+}
